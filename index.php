@@ -1,3 +1,9 @@
+<!--
+    * User: Chandu Dissanayake
+    * ID  : A00853877
+    * Date: 2017-09-07
+    * Time: 12:48 PM
+-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,10 +12,15 @@
     </head>
     <body>
         <?php
+
+
+            //Imports Student class
             include('Student.php');
 
+            //Create Student array
             $students = array();
 
+            //Initialize first student
             $first = new Student();
             $first->surname = "Doe";
             $first->first_name = "John";
@@ -20,6 +31,7 @@
             $first->add_grade(55);
             $students['j123'] = $first;
 
+            //Initializes second student
             $second = new Student();
             $second->surname = "Einstein";
             $second->first_name = "Albert";
@@ -31,6 +43,7 @@
             $second->add_grade(50);
             $students['a456'] = $second;
 
+            //Initializes third student
             $third = new Student();
             $third->surname = "Dissanayake";
             $third->first_name = "Chandu";
@@ -41,6 +54,7 @@
             $third->add_grade(75);
             $students['b69'] = $third;
 
+            //Sort and display students.
             ksort($students);
             foreach($students as $student)
                 echo $student->toString();
